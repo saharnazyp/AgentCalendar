@@ -13,14 +13,7 @@
 
 ---
 
-## ⚠️ امنیت — مهم
-
-این مخزن **عمومی (public)** است. هیچ توکن یا ایمیلی نباید داخل کد قرار بگیرد.
-تمام مقادیر حساس از **Script Properties** خوانده می‌شوند (نگاه کنید به `src/Config.gs`).
-
-اگر قبلاً توکن باتتان جایی لو رفته، همین حالا در [@BotFather](https://t.me/BotFather)
-با دستور `/revoke` آن را باطل و توکن جدید بسازید.
-
+#
 ---
 
 ## 🚀 راه‌اندازی سریع
@@ -46,52 +39,6 @@ BOSS_EMAIL           = boss@example.com
 ۶. برای مانیتور: **Deploy → New deployment → Web app**.
 
 راهنمای کامل گام‌به‌گام در [`docs/setup.md`](docs/setup.md).
-
----
-
-## 🔧 آپلود به گیت‌هاب با clasp (پیشنهادی)
-
-از آنجا که این یک پروژه‌ی Apps Script است، بهترین راه همگام‌نگه‌داشتن کد
-با گیت، ابزار رسمی `clasp` است:
-
-</div>
-
-```bash
-# نصب
-npm install -g @google/clasp
-clasp login
-
-# اتصال به پروژه‌ی موجود (Script ID را از Project Settings بردارید)
-cp .clasp.json.example .clasp.json
-#  scriptId را داخل .clasp.json بگذارید
-
-# کشیدن کد فعلی از Apps Script
-clasp pull
-
-# یا فرستادن کد محلی به Apps Script
-clasp push
-```
-
-<div dir="rtl">
-
-### آپلود اولیه به گیت‌هاب
-
-</div>
-
-```bash
-git init
-git add .
-git commit -m "Initial commit: calendar & meeting agent"
-git branch -M main
-git remote add origin https://github.com/USERNAME/calendar-meeting-agent.git
-git push -u origin main
-```
-
-<div dir="rtl">
-
-> ⚠️ فایل `.clasp.json` در `.gitignore` قرار دارد و آپلود نمی‌شود (حاوی Script ID خصوصی است).
-
----
 
 ## 📂 ساختار
 
